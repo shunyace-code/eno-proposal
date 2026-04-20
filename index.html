@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ENOさん ローンチ提案書 — MOSH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --mosh-coral:       #E4766E;
+  --mosh-coral-dark:  #C25550;
+  --mosh-coral-deep:  #9E3D38;
+  --mosh-coral-light: #F4A8A3;
+  --mosh-coral-pale:  #FCEEED;
+  --mosh-peach:       #FFD4CC;
+  --mosh-bg:          #FFF9F8;
+  --mosh-bg-alt:      #FFF3F1;
+  --gray-50:          #FAFAFA;
+  --gray-100:         #F5F5F5;
+  --gray-200:         #E5E5E5;
+  --gray-300:         #D4D4D4;
+  --gray-400:         #A3A3A3;
+  --gray-500:         #737373;
+  --gray-600:         #525252;
+  --gray-700:         #404040;
+  --gray-800:         #262626;
+  --gray-900:         #171717;
+  --white:            #FFFFFF;
+  --text-primary:     #262626;
+  --text-secondary:   #525252;
+  --text-muted:       #737373;
+  --green-accent:     #2D8C5A;
+  --green-light:      #E6F5ED;
+  --amber-accent:     #D97706;
+  --amber-light:      #FFF8E7;
+  --blue-accent:      #2563EB;
+  --blue-light:       #EFF6FF;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 18px; scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', 'Noto Sans JP', -apple-system, sans-serif;
+  background: var(--gray-100);
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+.slide {
+  width: 1280px;
+  min-height: 720px;
+  margin: 24px auto;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.04);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  page-break-after: always;
+}
+.slide-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 32px 48px 22px;
+  border-bottom: 1px solid var(--gray-200);
+  background: var(--mosh-bg);
+}
+.slide-header .subtitle {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--mosh-coral);
+  margin-bottom: 6px;
+}
+.slide-header h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.35;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.page-num {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--mosh-coral-light);
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  min-width: 40px;
+  text-align: right;
+}
+.slide-body {
+  flex: 1;
+  padding: 28px 48px 24px;
+}
+.slide-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 48px;
+  font-size: 12px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--gray-200);
+  background: var(--gray-50);
+}
+.cover-slide {
+  background: linear-gradient(135deg, var(--mosh-coral-deep) 0%, var(--mosh-coral) 40%, var(--mosh-coral-light) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px;
+  min-height: 720px;
+  border-radius: 12px;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.cover-slide::before {
+  content: '';
+  position: absolute;
+  right: -120px;
+  top: -120px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+}
+.cover-slide::after {
+  content: '';
+  position: absolute;
+  right: 60px;
+  bottom: -80px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+}
+.cover-overline {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 16px;
+}
+.cover-slide h1 {
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+  position: relative;
+  z-index: 1;
+}
+.cover-line {
+  width: 80px;
+  height: 3px;
+  background: rgba(255,255,255,0.5);
+  margin-bottom: 20px;
+}
+.cover-sub {
+  font-size: 19px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+  max-width: 680px;
+  position: relative;
+  z-index: 1;
+}
+.cover-right-data {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+}
+.cover-stat {
+  text-align: right;
+  padding: 16px 24px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.stat-value {
+  font-size: 32px;
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
+}
+.stat-label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  margin-top: 2px;
+}
+.cover-meta {
+  position: absolute;
+  bottom: 40px;
+  left: 80px;
+  display: flex;
+  gap: 40px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  z-index: 1;
+}
+.cover-meta strong {
+  display: block;
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  margin-top: 2px;
+}
+.key-message {
+  background: var(--mosh-coral-pale);
+  border-left: 4px solid var(--mosh-coral);
+  padding: 16px 22px;
+  margin-bottom: 22px;
+  font-size: 15px;
+  line-height: 1.75;
+  border-radius: 0 8px 8px 0;
+  color: var(--text-primary);
+}
+.key-message strong {
+  color: var(--mosh-coral-dark);
+  font-weight: 700;
+}
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.grid-60-40 { display: grid; grid-template-columns: 60% 40%; gap: 20px; }
+.metric-card {
+  background: var(--mosh-bg);
+  border: 1px solid var(--mosh-peach);
+  border-radius: 10px;
+  padding: 20px 22px;
+  text-align: center;
+}
+.metric-value {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--mosh-coral-dark);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.1;
+}
+.metric-unit {
+  font-size: 16px;
+  font-weight: 600;
+}
+.metric-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 6px;
+  letter-spacing: 0.5px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14.5px;
+  margin-bottom: 16px;
+}
+th {
+  background: var(--mosh-coral-dark);
+  color: var(--white);
+  padding: 11px 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+th:first-child { border-radius: 6px 0 0 0; }
+th:last-child { border-radius: 0 6px 0 0; }
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--gray-200);
+  color: var(--text-primary);
+  vertical-align: top;
+  line-height: 1.6;
+}
+tr:nth-child(even) td { background: var(--mosh-bg); }
+tr:last-child td { border-bottom: none; }
+td strong { color: var(--mosh-coral-dark); font-weight: 700; }
+td em { color: var(--mosh-coral); font-style: normal; font-weight: 600; }
+table.compact { font-size: 13.5px; }
+table.compact th { padding: 8px 12px; font-size: 12px; }
+table.compact td { padding: 7px 12px; }
+.section-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--mosh-coral);
+  display: inline-block;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.callout {
+  background: linear-gradient(135deg, var(--mosh-coral-deep), var(--mosh-coral-dark));
+  color: var(--white);
+  padding: 16px 22px;
+  border-radius: 10px;
+  margin: 16px 0;
+}
+.callout-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  color: var(--mosh-peach);
+}
+.callout-text {
+  font-size: 15px;
+  line-height: 1.7;
+}
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin-right: 4px;
+}
+.tag-coral { background: var(--mosh-coral-pale); color: var(--mosh-coral-dark); }
+.tag-blue { background: var(--blue-light); color: var(--blue-accent); }
+.flow-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 16px 0;
+}
+.flow-step {
+  flex: 1;
+  background: var(--mosh-bg);
+  border: 1px solid var(--mosh-peach);
+  border-radius: 10px;
+  padding: 14px 16px;
+  text-align: center;
+  position: relative;
+}
+.flow-step .flow-icon { font-size: 28px; margin-bottom: 6px; }
+.flow-step .flow-title { font-size: 14px; font-weight: 700; color: var(--mosh-coral-dark); margin-bottom: 4px; }
+.flow-step .flow-desc { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+.flow-arrow { font-size: 22px; color: var(--mosh-coral-light); padding: 0 6px; flex-shrink: 0; }
+.chart-container {
+  background: var(--mosh-bg);
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+.chart-title { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 14px; }
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 160px;
+  padding: 0 8px;
+}
+.bar-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+}
+.bar {
+  width: 100%;
+  max-width: 50px;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  transition: height 0.3s;
+}
+.bar-value {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+.bar-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  text-align: center;
+}
+.timeline { position: relative; padding-left: 28px; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: var(--mosh-coral-light);
+}
+.timeline-item { position: relative; margin-bottom: 14px; padding-left: 12px; }
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -24px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--mosh-coral);
+  border: 2px solid var(--white);
+  box-shadow: 0 0 0 2px var(--mosh-coral-light);
+}
+.tl-date { font-size: 12px; font-weight: 700; color: var(--mosh-coral); margin-bottom: 2px; }
+.tl-text { font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
+.mini-list { list-style: none; padding: 0; }
+.mini-list li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  padding: 4px 0 4px 18px;
+  position: relative;
+}
+.mini-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mosh-coral);
+}
+.rec-card {
+  background: var(--mosh-bg);
+  border: 1px solid var(--mosh-peach);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.rec-num {
+  width: 34px;
+  height: 34px;
+  background: var(--mosh-coral);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
+  flex-shrink: 0;
+}
+.rec-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.rec-detail {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+.table-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: -6px;
+  margin-bottom: 14px;
+  font-style: italic;
+}
+.mb-8 { margin-bottom: 8px; }
+.mb-12 { margin-bottom: 12px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-20 { margin-bottom: 20px; }
+.mt-8 { margin-top: 8px; }
+.mt-12 { margin-top: 12px; }
+@media print {
+  body { background: white; }
+  .slide { box-shadow: none; margin: 0; page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== 01: カバースライド ========== -->
+<div class="slide cover-slide">
+  <div class="cover-overline">MOSH × ENOさん</div>
+  <h1>ENOさん<br>ローンチ提案書</h1>
+  <div class="cover-line"></div>
+  <div class="cover-sub">
+    フォトグラファー @eeeeeeeno のための<br>
+    写真講座・コミュニティの商品設計から集客・販売までの全体プラン
+  </div>
+  <div class="cover-right-data">
+    <div class="cover-stat">
+      <div class="stat-value">7.1<span style="font-size:16px">万人</span></div>
+      <div class="stat-label">Instagramフォロワー</div>
+    </div>
+    <div class="cover-stat">
+      <div class="stat-value">2<span style="font-size:16px">商品</span></div>
+      <div class="stat-label">講座 + コミュニティ</div>
+    </div>
+    <div class="cover-stat">
+      <div class="stat-value">¥720<span style="font-size:16px">万</span></div>
+      <div class="stat-label">年間売上見込（目安）</div>
+    </div>
+  </div>
+  <div class="cover-meta">
+    <div>DATE<strong>2026.04.20</strong></div>
+    <div>CLASSIFICATION<strong>Confidential</strong></div>
+  </div>
+</div>
+
+<!-- ========== 02: クリエイター紹介・強み ========== -->
+<div class="slide">
+  <div class="slide-header">
+    <div>
+      <div class="subtitle">クリエイター紹介</div>
+      <h1>ENOさんの「デザイン×写真」という唯一無二の強みを活かす</h1>
+    </div>
+    <div class="page-num">02</div>
+  </div>
+  <div class="slide-body">
+    <div class="key-message">
+      <strong>ポイント:</strong> 多摩美デザイン出身→独学フォトグラファー→映画・大河ドラマのスチール撮影。この「デザイナーの目」で写真を教えられるのはENOさんだけです。
+    </div>
+    <div class="grid-3 mb-16">
+      <div class="metric-card">
+        <div class="metric-value">7.1<span class="metric-unit">万人</span></div>
+        <div class="metric-label">Instagramフォロワー</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">10<span class="metric-unit">年+</span></div>
+        <div class="metric-label">写真家としてのキャリア</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">多摩美<span class="metric-unit">卒</span></div>
+        <div class="metric-label">デザインの専門教育</div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="section-title">強み</div>
+        <ul class="mini-list">
+          <li><strong>デザイン思考 × 写真</strong>: 色彩・構図をロジカルに言語化できる</li>
+          <li><strong>圧倒的な実績</strong>: 映画『東京リベンジャーズ』、NHK大河ドラマ『べらぼう』スチール撮影</li>
+          <li><strong>SNS発のキャリア</strong>: Instagram公式ブログ掲載でブレイク。SNS活用の実体験がある</li>
+          <li><strong>著書あり</strong>: 『SNS時代のフォトグラファーガイドブック』共著</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-title">まだ活かせていない部分</div>
+        <ul class="mini-list">
+          <li><strong>自身の商品がない</strong>: 撮影案件が中心で、ストック型の収益がない</li>
+          <li><strong>教育コンテンツ未展開</strong>: デザイン×写真のメソッドを体系化すれば大きな需要がある</li>
+          <li><strong>コミュニティ未構築</strong>: 7万人のフォロワーとの関係を深める場がない</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span>Confidential — ENOさん ローンチ提案書</span>
+    <span>2026.04.20</span>
+  </div>
+</div>
+
+<!-- ========== 03: コンセプト設計 ========== -->
+<div class="slide">
+  <div class="slide-header">
+    <div>
+      <div class="subtitle">コンセプト設計</div>
+      <h1>「なんとなく撮る」から「自分の世界観で撮る」への変革を届ける</h1>
+    </div>
+    <div class="page-num">03</div>
+  </div>
+  <div class="slide-body">
+    <div class="key-message">
+      <strong>ポイント:</strong> カメラを買ったけど「自分らしい写真」が撮れずに悩んでいる人は非常に多い。ENOさんの「デザイナー思考で写真を分解する」アプローチは、この層に対する最強の解決策です。
+    </div>
+    <table>
+      <tr><th>#</th><th>要素</th><th>内容</th></tr>
+      <tr><td><strong>1</strong></td><td><strong>ターゲットの悩み</strong></td><td>カメラを買ったが「なんとなく撮っている」状態。SNSに写真を上げても反応が薄い。プロっぽい色味や構図の作り方がわからない。</td></tr>
+      <tr><td><strong>2</strong></td><td><strong>理想の未来</strong></td><td>自分の写真に「世界観」が生まれ、SNSで反応が増える。撮影依頼が来るようになる。写真を通じた自己表現に自信が持てる。</td></tr>
+      <tr><td><strong>3</strong></td><td><strong>なぜうまくいかないか</strong></td><td>YouTubeやネットの情報はバラバラで体系化されていない。色味・構図・光の3要素を「デザインの視点」から統合的に学べる場がない。</td></tr>
+      <tr><td><strong>4</strong></td><td><strong>解決方法</strong></td><td>ENOさん独自の「デザイナー思考 × フォトグラフィー」メソッドで、色彩設計・構図・光の3要素を体系的に学ぶ。</td></tr>
+      <tr><td><strong>5</strong></td><td><strong>選ばれる理由</strong></td><td>多摩美デザイン卒→独学で写真家に転身→Instagram公式掲載→映画・大河ドラマのスチール。デザインの基礎から写真に落とし込める唯一のフォトグラファー。</td></tr>
+    </table>
+    <div class="callout">
+      <div class="callout-title">▸ 差別化ポイント</div>
+      <div class="callout-text">「カメラの操作」ではなく「デザイン思考で写真を設計する」というアプローチ。構図＝レイアウト、色味＝カラーパレット、光＝コントラスト設計。グラフィックデザインの言語で写真を教えられるのはENOさんだけ。</div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span>Confidential — ENOさん ローンチ提案書</span>
+    <span>2026.04.20</span>
+  </div>
+</div>
+
+<!-- ========== 04: 商品設計 ========== -->
+<div class="slide">
+  <div class="slide-header">
+    <div>
+      <div class="subtitle">商品設計</div>
+      <h1>入門教材+月額コミュニティの2つでお客様の成長をサポート</h1>
+    </div>
+    <div class="page-num">04</div>
+  </div>
+  <div class="slide-body">
+    <div class="key-message">
+      <strong>ポイント:</strong> 入門教材で「ENOさんメソッド」の価値を実感してもらい、もっと学びたい方がコミュニティに参加する自然な流れを設計します。
+    </div>
+    <table>
+      <tr><th>商品</th><th>MOSHのサービスタイプ</th><th>価格</th><th>対象</th><th>内容</th></tr>
+      <tr>
+        <td><strong>ENO's Photo Design Lab</strong> <span class="tag tag-coral">メイン</span></td>
+        <td>サブスクタイプ</td>
+        <td>月額 5,980円</td>
+        <td>写真の世界観を<br>磨きたい方</td>
+        <td>月2回のオンライン講義 / 月1回のフォトウォーク / コミュニティ内での写真添削 / 限定プリセット配布（月1セット）</td>
+      </tr>
+      <tr>
+        <td><strong>シネマティックフォト入門</strong> <span class="tag tag-blue">入門</span></td>
+        <td>講座・コンテンツタイプ</td>
+        <td>14,800円（買い切り）</td>
+        <td>写真初〜中級者</td>
+        <td>ENOさんの色彩・構図の基本メソッド動画（全5章・約3時間）/ オリジナルLightroomプリセット5種類付き</td>
+      </tr>
+    </table>
+    <div class="section-title mt-12">なぜこの構成なのか</div>
+    <ul class="mini-list">
+      <li>入門教材は「ENOさんメソッド」のエッセンスを凝縮。これだけでも写真が変わる独立した価値がある教材</li>
+      <li>コミュニティは「継続的に学びたい」「添削を受けたい」「仲間がほしい」方向け。撮影→添削→改善のサイクルが回る</li>
+      <li>月1回のフォトウォークで、オンラインだけでは学べない「現場での目の使い方」を直接伝えられる</li>
+    </ul>
+  </div>
+  <div class="slide-footer">
+    <span>Confidential — ENOさん ローンチ提案書</span>
+    <span>2026.04.20</span>
+  </div>
+</div>
+
+<!-- ========== 05: お客様の流れ ========== -->
+<div class="slide">
+  <div class="slide-header">
+    <div>
+      <div class="subtitle">お客様の流れ</div>
+      <h1>SNSで知る → LINEで学ぶ → MOSHで始める</h1>
+    </div>
+    <div class="page-num">05</div>
+  </div>
+  <div class="slide-body">
+    <div class="key-message">
+      <strong>ポイント:</strong> 7.1万人のフォロワーを「見るだけの人」から「学びたい人」へ。無料特典で関係を深め、納得した方だけが購入する誠実な流れを設計します。
+    </div>
+    <div class="flow-horizontal mb-20">
+      <div class="flow-step">
+        <div class="flow-icon">📷</div>
+        <div class="flow-title">SNSで知る</div>
+        <div class="flow-desc">Instagram / YouTube<br>で写真・ノウハウに出会う</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-icon">🎁</div>
+        <div class="flow-title">LINE登録</div>
+        <div class="flow-desc">無料プリセット+<br>構図ガイドを受け取る</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-icon">💌</div>
+        <div class="flow-title">価値共有</div>
+        <div class="flow-desc">10〜14日間の<br>写真上達メソッド配信</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-icon">🎓</div>
+        <div class="flow-title">案内</div>
+        <div class="flow-desc">教材 or コミュニティ<br>のご案内</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-icon">🌟</div>
+        <div class="flow-title">購入・体験</div>
+        <div class="flow-desc">MOSH経由で購入<br>上達 → 口コミ</div>
+      </div>
+    </div>
+    <div class="section-title">使うツール</div>
+    <table class="compact">
+      <tr><th>ツール</th><th>月額</th><th>役割</th></tr>
+      <tr><td><strong>MOSH</strong></td><td>無料（手数料のみ）</td><td>販売・決済・コンテンツ配信・コミュニティ・予約</td></tr>
+      <tr><td><strong>LINE公式アカウント</strong></td><td>無料〜5,000円</td><td>価値共有配信・メソッド紹介・ご案内</td></tr>
+      <tr><td><strong>Zoom</strong></td><td>無料〜2,125円</td><td>月2回のオンライン講義</td></tr>
+    </table>
+  </div>
+  <div class="slide-footer">
+    <span>Confidential — ENOさん ローンチ提案書</span>
+    <span>2026.04.20</span>
+  </div>
+</div>
+
+<!-- ========== 06: SNS集客の進め方 ========== -->
+<div class="slide">
+  <div class="slide-header">
+    <div>
+      <div class="subtitle">SNS集客の進め方</div>
+      <h1>Instagram × YouTubeの2本柱で「学びたい人」を集める</h1>
+    </div>
+    <div class="page-num">06</div>
+  </div>
+  <div class="slide-body">
+    <div class="key-message">
+      <strong>ポイント:</strong> すでに7.1万フォロワーのInstagramが最大の武器。ここに「教える」視点のコンテンツを加え、YouTubeで深い信頼を構築します。
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="section-title">Instagram（既存の強みを活かす）</div>
+        <ul class="mini-list">
+          <li><strong>Reels</strong>: ビフォーアフター編集、撮影の裏側、構図の解説ショート動画</li>
+          <li><strong>ストーリーズ</strong>: 撮影の日常+フォロワーからの写真添削Q&A</li>
+          <li><strong>自動DM</strong>: 「構図」「プリセット」等のキーワードでLINE誘導</li>
+          <li><strong>投稿</strong>: 作品投稿に「なぜこう撮ったか」のデザイン解説キャプション</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-title">YouTube（新規立ち上げ）</div>
+        <ul class="mini-list">
+          <li><strong>月2〜4本</strong>: 量より質。1本15〜20分の丁寧な解説</li>
+          <li><strong>テーマ例</strong>: 「デザイナーが教える構図の黄金法則」「映画スチールの色設計」</li>
+          <li><strong>撮影Vlog</strong>: フォトウォーク風の撮影実演+その場で構図を解説</li>
+          <li><strong>動画の最後にLINE誘導</strong>: 無料プリセットのプレゼント</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-title mt-12">LINE登録の無料特典</div>
+    <div class="rec-card">
+      <div class="rec-num">🎁</div>
+      <div>
+        <div class="rec-title">「ENO's Color Design Kit」無料プレゼント</div>
+        <div class="rec-detail">Lightroomプリセット3種（シネマティック / ナチュラル / モノクローム）+ PDF「デザイナーが教える構図の基本10パターン」（20ページ）。<br>「これが無料なら有料の講座はどれだけすごいんだろう」と思ってもらえるレベルに設計。</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span>Confidential — ENOさん ローンチ提案書</span>
+    <span>2026.04.20</span>
+  </div>
+</div>
+
+<!-- ========== 07: 売上シミュレーション ========== -->
+<div class="slide">
+  <div class="slide-header">
+    <div>
+      <div class="subtitle">売上シミュレーション</div>
+      <h1>6ヶ月後の売上イメージ: 3つのシナリオ</h1>
+    </div>
+    <div class="page-num">07</div>
+  </div>
+  <div class="slide-body">
+    <div class="key-message">
+      <strong>ポイント:</strong> 7.1万フォロワーの既存基盤があるため、LINE登録→購入の初動が見込めます。標準シナリオで6ヶ月累計約400万円を想定。
+    </div>
+    <div class="grid-60-40">
+      <div>
+        <div class="chart-container">
+          <div class="chart-title">月間売上の推移 — 標準シナリオ（6ヶ月）</div>
+          <div class="bar-chart">
+            <div class="bar-group">
+              <div class="bar" style="height:25%; background:var(--mosh-coral);">
+                <span class="bar-value">¥24万</span>
+              </div>
+              <div class="bar-label">1ヶ月目</div>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height:37%; background:var(--mosh-coral);">
+                <span class="bar-value">¥36万</span>
+              </div>
+              <div class="bar-label">2ヶ月目</div>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height:52%; background:var(--mosh-coral);">
+                <span class="bar-value">¥52万</span>
+              </div>
+              <div class="bar-label">3ヶ月目</div>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height:65%; background:var(--mosh-coral);">
+                <span class="bar-value">¥65万</span>
+              </div>
+              <div class="bar-label">4ヶ月目</div>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height:82%; background:var(--mosh-coral);">
+                <span class="bar-value">¥82万</span>
+              </div>
+              <div class="bar-label">5ヶ月目</div>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height:100%; background:var(--mosh-coral);">
+                <span class="bar-value">¥97万</span>
+              </div>
+              <div class="bar-label">6ヶ月目</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-title">3つのシナリオ</div>
+        <table class="compact">
+          <tr><th>指標</th><th>控えめ</th><th>標準</th><th>好調</th></tr>
+          <tr><td>6ヶ月累計</td><td>¥180万</td><td><strong>¥356万</strong></td><td>¥580万</td></tr>
+          <tr><td>LINE登録</td><td>800人</td><td><strong>1,600人</strong></td><td>2,800人</td></tr>
+          <tr><td>教材購入者</td><td>60人</td><td><strong>120人</strong></td><td>200人</td></tr>
+          <tr><td>コミュニティ会員</td><td>40人</td><td><strong>90人</strong></td><td>160人</td></tr>
+        </table>
+        <div class="table-note">※ あくまで目安です。実績に応じて修正します。<br>※ 類似クリエイターの成功事例（次スライド参照）を踏まえた試算です。</div>
+        <div class="section-title mt-12">前提条件</div>
+        <ul class="mini-list">
+          <li>教材: ¥14,800 × 月10〜35本</li>
+          <li>サブスク: ¥5,980/月 × 会員数</li>
+          <li>LINE登録率: フォロワーの2〜4%</li>
+          <li>購入率: LINE登録者の5〜8%</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span>Confidential — ENOさん ローンチ提案書</span>
+    <span>2026.04.20</span>
+  </div>
+</div>
+
+<!-- ========== 08: 事例紹介 ========== -->
+<div class="slide">
+  <div class="slide-header">
+    <div>
+      <div class="subtitle">事例紹介</div>
+      <h1>Instagramから教育ビジネスを立ち上げた2人のクリエイター</h1>
+    </div>
+    <div class="page-num">08</div>
+  </div>
+  <div class="slide-body">
+    <div class="key-message">
+      <strong>ポイント:</strong> 「SNSのフォロワー × 専門スキル」を教育商品に転換して成功しているクリエイターは既に存在します。ENOさんと同じく、Instagramを起点にオンライン講座・コミュニティを展開している2つの事例をご紹介します。
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="section-title"><a href="https://www.instagram.com/sanatana_school/" target="_blank" style="color:inherit; text-decoration:none; border-bottom:1px dashed var(--mosh-coral);">サナータナ満明さん — デザイン塾 ↗</a></div>
+        <div class="grid-3 mb-12">
+          <div class="metric-card">
+            <div class="metric-value" style="font-size:28px;">18.9<span class="metric-unit">万人</span></div>
+            <div class="metric-label">Instagramフォロワー</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value" style="font-size:28px;">月額<span class="metric-unit">制</span></div>
+            <div class="metric-label">サブスク型スクール</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value" style="font-size:28px;">3<span class="metric-unit">形式</span></div>
+            <div class="metric-label">動画/Zoom/対面</div>
+          </div>
+        </div>
+        <ul class="mini-list">
+          <li><strong>ジャンル</strong>: グラフィックデザイン・Web デザイン教育</li>
+          <li><strong>商品</strong>: オンライン動画講義 + Zoomライブ講義 + 対面講義の3形式</li>
+          <li><strong>集客</strong>: Instagram Reels でデザインTips → 毎月無料Zoom勉強会 → 有料スクールへ</li>
+          <li><strong>ENOさんとの共通点</strong>: デザインの専門知識をSNSで発信 → 教育ビジネスに転換</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-title"><a href="https://www.instagram.com/sola_iphoto/" target="_blank" style="color:inherit; text-decoration:none; border-bottom:1px dashed var(--mosh-coral);">そらさん — iPhone写真講座 ↗</a></div>
+        <div class="grid-3 mb-12">
+          <div class="metric-card">
+            <div class="metric-value" style="font-size:22px;">iPhone<span class="metric-unit">特化</span></div>
+            <div class="metric-label">スマホ写真の専門家</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value" style="font-size:22px;">日常→<span class="metric-unit">非日常</span></div>
+            <div class="metric-label">コンセプト</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value" style="font-size:22px;">写真<span class="metric-unit">教育</span></div>
+            <div class="metric-label">同ジャンルの先行事例</div>
+          </div>
+        </div>
+        <ul class="mini-list">
+          <li><strong>ジャンル</strong>: iPhone写真・スマホフォトグラフィー教育</li>
+          <li><strong>コンセプト</strong>: 「iPhoneカメラで日常を非日常に」— 身近なデバイスで写真の楽しさを伝える</li>
+          <li><strong>ポイント</strong>: 「一眼レフ」ではなく「iPhone」に特化することで初心者の心理的ハードルを下げている</li>
+          <li><strong>ENOさんとの共通点</strong>: 写真教育ジャンル。ENOさんは「一眼×デザイン思考」という上位の差別化が可能</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">
+      <div class="callout-title">▸ ENOさんへの示唆</div>
+      <div class="callout-text">サナータナさんは「デザイン知識 × Instagram → 教育事業」で18.9万フォロワーを獲得。そらさんは「写真 × 初心者特化」で市場を開拓。ENOさんは両者の強みを兼ね備えています。「デザイン思考で写真を教える」という独自ポジションは、この2つの成功事例の交差点に位置しています。</div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span>Confidential — ENOさん ローンチ提案書</span>
+    <span>2026.04.20</span>
+  </div>
+</div>
+
+<!-- ========== 09: LINE配信の概要 ========== -->
+<div class="slide">
+  <div class="slide-header">
+    <div>
+      <div class="subtitle">LINE配信の概要</div>
+      <h1>14日間の「写真上達メソッド配信」で信頼を築く</h1>
+    </div>
+    <div class="page-num">09</div>
+  </div>
+  <div class="slide-body">
+    <div class="key-message">
+      <strong>ポイント:</strong> 「売り込み」ではなく「価値の共有」。ENOさんのメソッドの一部を無料で届け、「もっと学びたい」と思った方だけが自然に次のステップに進む流れです。
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="section-title">配信スケジュール（14日間）</div>
+        <table class="compact">
+          <tr><th>日</th><th>テーマ</th><th>内容</th></tr>
+          <tr><td><strong>Day 0</strong></td><td>ウェルカム</td><td>無料プリセット配布 + 自己紹介</td></tr>
+          <tr><td><strong>Day 1</strong></td><td>自己開示</td><td>デザイナー→写真家の経緯と学び</td></tr>
+          <tr><td><strong>Day 3</strong></td><td>ビジョン</td><td>なぜ写真を教えたいのか</td></tr>
+          <tr><td><strong>Day 5</strong></td><td>現状の整理</td><td>あなたの写真の伸びしろチェック</td></tr>
+          <tr><td><strong>Day 7</strong></td><td>選択肢の提示</td><td>独学・スクール含む学び方の比較</td></tr>
+          <tr><td><strong>Day 9</strong></td><td>メソッド紹介</td><td>構図のデザイン原則（無料ノウハウ）</td></tr>
+          <tr><td><strong>Day 11</strong></td><td>受講者の変化</td><td>学んだ方の写真のビフォーアフター</td></tr>
+          <tr><td><strong>Day 13</strong></td><td>判断材料</td><td>商品の内容・合う人/合わない人</td></tr>
+          <tr><td><strong>Day 14</strong></td><td>ご案内</td><td>教材 or コミュニティのご案内</td></tr>
+        </table>
+      </div>
+      <div>
+        <div class="section-title">配信で大切にすること</div>
+        <ul class="mini-list">
+          <li><strong>1通300字以内</strong>: 読みやすく、毎回開きたくなる長さ</li>
+          <li><strong>双方向</strong>: Day 5で「あなたの悩みを教えてください」と返信を促す</li>
+          <li><strong>正直さ</strong>: 合わない人には「合わない」と伝える</li>
+          <li><strong>検討期間</strong>: 7日間以上の募集期間を確保</li>
+        </ul>
+        <div class="callout">
+          <div class="callout-title">▸ 煽らないセールス</div>
+          <div class="callout-text">「残り○席」「今だけ」型の人工的な緊急性は使いません。ENOさんのメソッドの価値をそのまま伝え、納得した方に選んでいただくスタイルです。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span>Confidential — ENOさん ローンチ提案書</span>
+    <span>2026.04.20</span>
+  </div>
+</div>
+
+<!-- ========== 10: はじめの3ステップ ========== -->
+<div class="slide">
+  <div class="slide-header">
+    <div>
+      <div class="subtitle">はじめの3ステップ</div>
+      <h1>まずはこの3つから始めましょう</h1>
+    </div>
+    <div class="page-num">10</div>
+  </div>
+  <div class="slide-body">
+    <div class="key-message">
+      <strong>ポイント:</strong> 最初からすべてを完璧にする必要はありません。3つのステップで段階的に進めます。
+    </div>
+    <div class="rec-card">
+      <div class="rec-num">1</div>
+      <div>
+        <div class="rec-title">Step 1: 土台づくり（1〜2ヶ月目）</div>
+        <div class="rec-detail">コンセプト確定 / 入門教材の動画撮影（全5章）/ Lightroomプリセット制作 / MOSH上で商品ページ作成 / LINE公式アカウント開設 / 無料特典（Color Design Kit）制作</div>
+      </div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-num">2</div>
+      <div>
+        <div class="rec-title">Step 2: 集客開始（3〜4ヶ月目）</div>
+        <div class="rec-detail">Instagramで「教える」系コンテンツを投稿開始（Reels週2本）/ YouTube撮影Vlog月2本公開 / 自動DMでLINE登録を促進 / LINE配信シナリオを開始 / 入門教材の販売スタート</div>
+      </div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-num">3</div>
+      <div>
+        <div class="rec-title">Step 3: コミュニティ開始（5〜6ヶ月目）</div>
+        <div class="rec-detail">Photo Design Lab（月額コミュニティ）の募集開始 / 初回フォトウォーク開催 / オンライン講義をスタート / 受講者の写真のビフォーアフターを収集 / フィードバックを元に改善</div>
+      </div>
+    </div>
+    <div class="callout">
+      <div class="callout-title">▸ まず最初にやること</div>
+      <div class="callout-text">「シネマティックフォト入門」のカリキュラム設計（全5章の構成案づくり）。ENOさんの頭の中にある「デザイン × 写真」のメソッドを言語化するところから始めましょう。MOSHのアカウント開設も同時に進められます。</div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span>Confidential — ENOさん ローンチ提案書</span>
+    <span>2026.04.20</span>
+  </div>
+</div>
+
+</body>
+</html>
